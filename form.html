@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+
+<body>
+    <form>
+        <fieldset>
+            <legend>Biodata</legend>
+            <p>Nama: <input type="text" name="nama" placeholder="Naufal Muhammad Daffa"></p>
+            <p>Nim: <input type="text" name="nim" placeholder="20230140166"></p>
+            <p>Kelas: <input type="text" name="kelas" placeholder="D"></p>
+            <p>
+                Jenis Kelamin :
+                <input type="radio" name="jk" value="laki-laki" checked />
+                Laki - Laki
+                <input type="radio" name="jk" value="perempuan" />
+                Perempuan
+            </p>
+            <p>
+                Bahasa pemograman yang dikuasai: <br>
+                <input type="checkbox" name="web" checked> Web
+                <input type="checkbox" name="mobile"> MOBILE
+                <input type="checkbox" name="desk" checked> DESKTOP
+            </p>
+            <p>
+                Kota asal:
+                <select>
+                    <option>Semarang</option>
+                    <option>Bandung</option>
+                    <option  selected>Daerah Istimewa Yogyakarta</option>
+                </select>
+            </p>
+            <p>
+                Hobi:<br>
+                <textarea rows='10' cols='60' placeholder="Nyoba teknologi baru"></textarea>
+            </p>
+            <p><input type="submit" value="Submit"></p>
+        </fieldset>
+    </form>
+    <div>
+
+        <button class="back"><a href="index.html">Home</a></button>
+    </div>
+    <script>
+        const form = document.querySelector('form');
+        form.addEventListener('submit', function (event) {
+            event.preventDefault();
+            alert('Form submitted!');
+        });
+    </script>
+    
+</body>
+</html>
